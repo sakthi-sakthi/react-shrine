@@ -61,15 +61,15 @@ function Footer() {
                   <ul className="quick-links">
                     <li>
                       <i className="fas fa-history"></i>
-                      <Link to={"/events-and-celebrations"}>About Us</Link>
+                      <Link to={"/about"}>About Us</Link>
                     </li>
                     <li>
                       <i className="fas fa-calendar"></i>
-                      <Link to={"/overseas-mission"}>Liturgy Calendar</Link>
+                      <Link to={"/liturgycalendar"}>Liturgy Calendar</Link>
                     </li>
                     <li>
                       <i className="fas fa-play"></i>
-                      <Link to={"/scb-associates"}>Youtube</Link>
+                      <Link to={"https://www.youtube.com/channel/UCch65k5prROvL_RCN5f-oYw"} target="_blank">Youtube</Link>
                     </li>
                   </ul>
                 </div>
@@ -175,11 +175,11 @@ function Footer() {
                   &nbsp;Boscosofttech
                 </a>
                 &nbsp; &nbsp; &nbsp;
-                <a href="/" style={{ color: "#fff" }}>
+                <a href="/privacy" style={{ color: "#fff" }}>
                   Privacy Policy
                 </a>
                 &nbsp; &nbsp;
-                <a href="/" style={{ color: "#fff" }}>
+                <a href="/refund" style={{ color: "#fff" }}>
                   Refund Cancellation
                 </a>
               </p>
