@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom';
 function Liturgycalendar() {
     const [eventlist, setEventList] = useState([]);
     const [showModal, setShowModal] = useState(false);
+    const [selectedEvent, setSelectedEvent] = useState(null);
 
 
     useEffect(() => {
@@ -61,7 +62,6 @@ function Liturgycalendar() {
                         };
                     }).filter(event => event !== null);
 
-                    // Sort the events array by date and time
                     events?.sort((a, b) => {
                         return a.datetime - b.datetime;
                     });
@@ -74,9 +74,11 @@ function Liturgycalendar() {
             });
     }, []);
 
-    const openModal = () => {
+    const openModal = (info) => {
+        setSelectedEvent(info.event);
         setShowModal(true);
     };
+
 
     const handleBookMass = () => {
         window.open('https://massbooking.shrinebasilicabangalore.org/', '_blank');
@@ -113,15 +115,17 @@ function Liturgycalendar() {
                     themeSystem="bootstrap"
                     eventContent={renderEventContent}
                     dayMaxEventRows={4}
+                    editable={true}
+                    eventOrder="datetime"
                 />
+
             </div>
             <br />
             <Footer />
 
-
-            <Modal show={showModal} onHide={() => setShowModal(false)} centered>
+            <Modal show={showModal} onHide={handleCancel} centered backdrop="static" keyboard={false}>
                 <Modal.Header>
-                    <Modal.Title>Book Mass</Modal.Title>
+                    <Modal.Title>{selectedEvent ? `${selectedEvent.title}` : 'Book Mass'}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div className="d-flex justify-content-end">
@@ -135,7 +139,6 @@ function Liturgycalendar() {
                     </div>
                 </Modal.Body>
             </Modal>
-
 
         </>
     );
