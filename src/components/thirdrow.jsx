@@ -10,7 +10,7 @@ function Thirdrow() {
             <img
               className="w-100"
               height={"400"}
-              src="https://shrinehtml.pages.dev/wp-content/uploads/2022/04/church-1.jpg"
+              src="images/logos/img/church-1.jpg"
               alt=""
               style={{ objectFit: "cover"}}
             />
@@ -22,7 +22,7 @@ function Thirdrow() {
             <img
               className="w-100"
               height={"400"}
-              src="https://shrinehtml.pages.dev/wp-content/uploads/2022/04/darkened-lent-tile.jpg"
+              src="images/logos/img/darkened-lent-tile.jpg"
               alt=""
             />
             <h1 className="text-white position-absolute top-50 start-50 translate-middle"><Link to={"/masstime"} style={{ textDecoration: "none", color: "#fff" }}>MASS TIMING</Link></h1>

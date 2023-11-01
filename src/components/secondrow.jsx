@@ -10,7 +10,7 @@ const Secondrow = () => {
             <img
               height={"366"}
               width={"251"}
-              src="https://shrinehtml.pages.dev/wp-content/uploads/2022/06/Rev.-Fr.-Martin-Kumar-Rector-cum-Parish-Priest-251x300.jpg"
+              src="/images/logos/img/Rev.-Fr.-Martin-Kumar-Rector-cum-Parish-Priest.jpg"
               alt=""
             />
           </div>
@@ -26,7 +26,7 @@ const Secondrow = () => {
               <img
                 className="w-100"
                 height={"400"}
-                src="https://shrinehtml.pages.dev/wp-content/uploads/2022/04/prayer-request-1.jpg"
+                src="images/logos/img/prayer-request-1.jpg"
                 alt=""
               />
               <h4 className="text-black position-absolute top-50 start-50 translate-middle"><b><Link to={"/prayer-request"} style={{ textDecoration: "none", color: "#fff" }}>PRAYER REQUEST</Link></b></h4>
@@ -37,7 +37,7 @@ const Secondrow = () => {
               <img
                 className="w-100"
                 height={"400"}
-                src="https://shrinehtml.pages.dev/wp-content/uploads/2022/04/church-1.jpg"
+                src="images/logos/img/church-1.jpg"
                 alt=""
                 style={{ objectFit: "cover" }}
               />
