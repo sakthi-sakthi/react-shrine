@@ -22,7 +22,6 @@ function Liturgycalendar() {
         axios.get('https://cristolive.org/api/liturgical/17570/upcoming')
             .then(response => {
                 const data = response?.data?.data;
-
                 if (Array.isArray(data)) {
                     const events = data?.map((item, index) => {
                         const liturgyOn = item.liturgy_on;
@@ -30,7 +29,7 @@ function Liturgycalendar() {
                         const date = liturgyOn ? moment(liturgyOn, customFormat) : null;
 
                         if (date && date.isBefore(moment())) {
-                            return null; 
+                            return null;
                         }
 
                         const formattedDate = date ? date.format('YYYY-MM-DD') : 'N/A';
@@ -57,11 +56,16 @@ function Liturgycalendar() {
                             title: `${item.language_id[1]} - ${formattedTime}`,
                             date: formattedDate,
                             color: color,
-                            textColor: DefaultTextcolor
+                            textColor: DefaultTextcolor,
+                            datetime: item.liturgyOn
                         };
                     }).filter(event => event !== null);
 
-                    console.log(events);
+                    // Sort the events array by date and time
+                    events?.sort((a, b) => {
+                        return a.datetime - b.datetime;
+                    });
+
                     setEventList(events);
                 }
             })
@@ -90,7 +94,7 @@ function Liturgycalendar() {
                         <h2 style={{ color: "#760f08", fontWeight: "bold" }}>Liturgy Calendar</h2>
                     </h3>
                     <div className="brudcrums">
-                        <span className="pagename" style={{ color: "#000", fontWeight: "bold" }}><Link to={"/"} style={{textDecoration:"none"}}> Home &nbsp;»&nbsp;{" "}</Link></span>
+                        <span className="pagename" style={{ color: "#000", fontWeight: "bold" }}><Link to={"/"} style={{ textDecoration: "none" }}> Home &nbsp;»&nbsp;{" "}</Link></span>
                         <span className="pagename" style={{ color: "#000", fontWeight: "bold" }}>Liturgy Calendar</span>
                     </div>
                 </div>
@@ -111,7 +115,7 @@ function Liturgycalendar() {
                     dayMaxEventRows={4}
                 />
             </div>
-            <br/>
+            <br />
             <Footer />
 
 
