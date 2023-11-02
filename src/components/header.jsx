@@ -12,26 +12,22 @@ function Header() {
                 <div className="header-bar-email" style={{ fontSize: "15px" }}>
                   <i
                     className="fa fa-envelope"
-                    style={{ color: "#f6c93f" }}
-                  ></i>
+                    style={{ color: "#f6c93f" }}></i>
                   <a href="mailto:shrinebasilicabangalore@gmail.com">
                     <span
                       className="__cf_email__"
-                      style={{ marginLeft: "0.5rem" }}
-                    >
+                      style={{ marginLeft: "0.5rem" }}>
                       shrinebasilicabangalore@gmail.com
                     </span>
                   </a>
                 </div>
                 <div
                   className="header-bar-text align-items-center justify-content-center"
-                  style={{ fontSize: "15px" }}
-                >
+                  style={{ fontSize: "15px" }}>
                   <i className="fa fa-phone" style={{ color: "#f6c93f" }}></i>
                   <a
                     href="tel:+91089513 02508"
-                    style={{ marginLeft: "0.3rem" }}
-                  >
+                    style={{ marginLeft: "0.3rem" }}>
                     +91 089513 02508
                   </a>
                 </div>
@@ -42,8 +38,7 @@ function Header() {
                     <a
                       href="https://www.facebook.com/sharer.php?u=https://stcharleschennai.com/index.php/events-and-celebrations"
                       target="_blank"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-facebook" />
                     </a>
                   </div>
@@ -51,8 +46,7 @@ function Header() {
                     <a
                       href="https://www.youtube.com/channel/UCch65k5prROvL_RCN5f-oYw"
                       target="_blank"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       <i className="fab fa-youtube" />
                     </a>
                   </div>
@@ -60,8 +54,7 @@ function Header() {
                     <a
                       href="https://feebook.southindianbank.com/FeeBookUser/org?id=441"
                       target="_blank"
-                      rel="noreferrer"
-                    >
+                      rel="noreferrer">
                       <i className="fas fa-donate" />
                     </a>
                   </div>
@@ -174,27 +167,24 @@ function Header() {
             data-target="#navbarNav"
             aria-controls="navbarNav"
             aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+            aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div
             class="collapse navbar-collapse header-align-center"
-            id="navbarNav"
-          >
+            id="navbarNav">
             <ul class="navbar-nav" style={{ cursor: "pointer" }}>
               <li
                 className={`nav-item ${
                   location.pathname === "/" ? "active" : ""
-                }`}
-              >
+                }`}>
                 <Link to="/" className="nav-link">
                   Home
                 </Link>
               </li>
-              <li className={`nav-item ${location.pathname === "/about"
-                  ? "active"
-                  : ""
+              <li
+                className={`nav-item ${
+                  location.pathname === "/about" ? "active" : ""
                 }`}>
                 <NavLink
                   to="/about"
@@ -203,8 +193,7 @@ function Header() {
                   role="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="false"
-                >
+                  aria-expanded="false">
                   About
                 </NavLink>
               </li>
@@ -212,30 +201,29 @@ function Header() {
                 <Link
                   to="https://www.youtube.com/channel/UCch65k5prROvL_RCN5f-oYw"
                   className="nav-link"
-                  target="_blank"
-                >
-                 Youtube
+                  target="_blank">
+                  Youtube
                 </Link>
               </li>
-
-              <li className={`nav-item`}>
+              <li
+                className={`Liturgynav  nav-item ${
+                  location.pathname === "/liturgycalendar" ? "active" : ""
+                }`}>
                 <Link to="/liturgycalendar" className="nav-link">
                   Liturgy Calendar
                 </Link>
               </li>
-
               <li>
                 <Link
                   to="https://feebook.southindianbank.com/FeeBookUser/org?id=441"
                   className="nav-link"
-                  target="_blank"
-                >
+                  target="_blank">
                   Donate
                 </Link>
               </li>
-              <li className={`nav-item ${location.pathname === "/contact"
-                ? "active"
-                : ""
+              <li
+                className={`nav-item ${
+                  location.pathname === "/contact" ? "active" : ""
                 }`}>
                 <Link to="/contact" className="nav-link">
                   Contact
@@ -245,8 +233,7 @@ function Header() {
                 <Link
                   to="http://epdata.stcharleschennai.com/web/login"
                   className="nav-link"
-                  target="_blank"
-                >
+                  target="_blank">
                   Login
                 </Link>
               </li>
