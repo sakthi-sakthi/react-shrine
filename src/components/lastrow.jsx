@@ -27,20 +27,56 @@ function Lastrow() {
               {massSchedule && (
                 <div>
                   {massSchedule.map((languageMass, index) => (
-                    <div className="mass" key={index} style={{ margin: "0 0 12px 0" }}>
-                      <h3 style={{ margin: "0 0 0 0", fontSize: "19px", fontWeight: 600, lineHeight: "26px", color: "#4691ce", textShadow: "none", cursor: "pointer" }}>
-                        {new Date(languageMass.liturgy_on).toLocaleString("en-US", { weekday: "long", year: "numeric", month: "short", day: "numeric" })}
+                    <div
+                      className="mass"
+                      key={index}
+                      style={{ margin: "0 0 12px 0" }}>
+                      <h3
+                        style={{
+                          margin: "0 0 0 0",
+                          fontSize: "19px",
+                          fontWeight: 600,
+                          lineHeight: "26px",
+                          color: "#4691ce",
+                          textShadow: "none",
+                          cursor: "pointer",
+                        }}>
+                        {new Date(languageMass.liturgy_on).toLocaleString(
+                          "en-US",
+                          {
+                            weekday: "long",
+                            year: "numeric",
+                            month: "short",
+                            day: "numeric",
+                          }
+                        )}
                       </h3>
-                      <span className="schedule" style={{ fontSize: "16px", color: "#333333", fontWeight: 500, lineHeight: "26px", textShadow: "none", cursor: "pointer" }}>
+                      <span
+                        className="schedule"
+                        style={{
+                          fontSize: "16px",
+                          color: "#333333",
+                          fontWeight: 500,
+                          lineHeight: "26px",
+                          textShadow: "none",
+                          cursor: "pointer",
+                        }}>
                         {languageMass?.mass?.map((masstime, masstimeIndex) => (
                           <span key={masstimeIndex}>
                             {masstime.language} -
                             {masstime?.mass_detail?.map((time, timeIndex) => (
                               <span className="ms-2" key={timeIndex}>
-                                {time?.mass_time}{timeIndex < masstime.mass_detail.length - 1 ? "," : ""}
+                                {time?.mass_time}
+                                {timeIndex < masstime.mass_detail.length - 1
+                                  ? ","
+                                  : ""}
                               </span>
                             ))}
-                            {masstimeIndex < languageMass.mass.length - 1 ? <br /> : ""}
+                            {masstimeIndex < languageMass.mass.length - 1 ? (
+                              <br />
+                            ) : (
+                              ""
+                            )}
                           </span>
                         ))}
                       </span>
@@ -49,13 +85,16 @@ function Lastrow() {
                 </div>
               )}
             </div>
-
           </div>
         </div>
       </div>
       <div className="col-md-6">
-        <img src="/images/logos/img/IMG_1824-scaled.jpg" width="930"
-          height="500" alt=""/>
+        <img
+          src="/images/logos/img/IMG_1824-scaled.jpg"
+          width="100%"
+          height="500"
+          alt=""
+        />
       </div>
     </div>
   );
