@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
@@ -16,7 +16,6 @@ function Prayerrequest() {
     formState: { errors },
   } = useForm({ mode: "onChange" });
 
-  const navigate = useNavigate();
   function onSubmitcontactform(data, e) {
     axios
       .post(`${ApiUrl}/store-prayerrequest`, data)
