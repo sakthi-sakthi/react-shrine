@@ -2384,7 +2384,7 @@ div.main-tile-text h2 {
   }
 
   #sp-section-2 {
-    background-image: url("https://stcharleschennai.com/images/headerbg.jpg");
+    /* background-image: url("https://stcharleschennai.com/images/headerbg.jpg"); */
     background-repeat: repeat;
     background-size: contain;
     background-attachment: scroll;
@@ -3492,4 +3492,11 @@ nav .header-align-center {
   padding-left: 10px;
   margin-left: 15px;
   background-color: #f5f5f5; /* Background color for items */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .arcbishop {
+    display: none !important;
+  }
 }

@@ -73,9 +73,10 @@ function Header() {
                       <div className="custom right-menu-in">
                         <p>
                           <img
+                            className="arcbishop"
                             style={{
-                              display: "block",
                               marginLeft: "-55px",
+                              marginTop: "8px",
                               height: "8rem",
                               maxWidth: "105px",
                               maxHeight: "105px",
