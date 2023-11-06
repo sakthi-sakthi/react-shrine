@@ -50,7 +50,7 @@ function Parishdetails() {
                 <div className="container">
                     <div className="row">
                         {parishData?.map((item) => (
-                            <div key={item.id} className="col-lg-4">
+                            <div key={item.id} className="col-lg-3">
                                 <div className="gallery-item">
                                     <img
                                         src={item.image}
